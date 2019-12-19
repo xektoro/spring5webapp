@@ -1,0 +1,45 @@
+javac -version - "javac" here is the java compiler (JDK)
+java -version - "java" here is the runtime environment (JRE)
+
+localhost:8085/h2-console, Database available at 'jdbc:h2:mem:testdb'
+
+start.spring.io - for generating
+и после File->New Project->From Existing Project
+
+mvnw - wrapper class for maven execution
+mvnw spring-boot:run - (1. навигирам се до проекта) 2.така се стартира проекта от терминала/cmd (като clean install)
+
+	JPA (Java Persistence API) - the official API for working with relational data in Java. 
+
+- It is only a specification (not concrete implementation)
+- JPA is a bridge from Java's object world to how data is stored in relational database
+- JPA offers Java developers database independence
+- one API will support many relational databases
+
+    Spring Data Repositiories
+
+- Provides an Implementation of the Repository Pattern
+- A repository has methods for retrieving domain objects should delegate to a specialized Repositoryobject such that alternative storage implementations may be interchanged (provides easily substitution of persistence
+layer from SQL to NoSQL for example)
+
+    Spring Data JPA
+	
+- Spring Data JPA is part/subset of a larger family of Spring Data projects
+- Uses Hibernate for persistence to supported RDBS systems
+- You extend a Java Repository Interface
+- Spring Data JPA provides the implementation at run time (No SQL required)
+1) we need to extend it and type the entity 
+2) On Run time Spring Data JPA gives us an impementation of it, injects it in our class (where we are using persistent operations)
+
+     Thymeleaf
+	 
+- Thymeleaf is a Java template engine
+- Thymeleaf takes the model (a POJO) and look into template and generate the HTML
+to return back to the client
+- Thymeleaf is a natural template engine - you can view the template naturally in your browser
+(това означава, че мога веднага да го проверя как изглежда - няма нужда от рестарт на сървъра)
+- JSP is not natural template engine
+- template - technology, we use to generate dynamic HTML
+
+
+

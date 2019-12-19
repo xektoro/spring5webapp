@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- name space for Thymeleaf tag -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Framework</title>
+</head>
+<body>
+<h1>Author List</h1>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+    </tr>
+    <!-- These values (123000000000000, Ivan, Ivanov are displayed only when we just want to view the template, not on server) -->
+    <!-- these values on server are ignored, only these in 'books' are displayed -->
+    <tr th:each="author : ${authors}">
+        <td th:text="${author.id}">123000000000000</td>
+        <td th:text="${author.firstName}">Ivan</td>
+        <td th:text="${author.lastName}">Ivanov</td>
+    </tr>
+</table>
+</body>
+
+</html>
